@@ -1,4 +1,4 @@
-let bodyCurrentClasses = document.querySelector('body').classList;
+let wrapperCurrentClasses = document.querySelector('#wrapper').classList;
 
 // HEADER
 
@@ -12,20 +12,9 @@ hamburgerIcon.addEventListener('click', toogleNavOnOff);
 let closeIcon = document.querySelector('#nav-menu img');
 closeIcon.addEventListener('click', toogleNavOnOff);
 
-// HOME : EXPLORE
+// HOME
 
-function exploreOn() {
-    let expandGrayCirle = document.getElementById('expand');
-    expandGrayCirle.classList.add('on');
-}
-
-function exploreOff() {
-    let expandGrayCirle = document.getElementById('expand');
-    expandGrayCirle.classList.remove('on');
-}
-
-if (bodyCurrentClasses.contains('home')) {
-    let exploreDisc = document.querySelector('#explore');
-    exploreDisc.addEventListener('mouseover', exploreOn);
-    exploreDisc.addEventListener('mouseout', exploreOff);
+if (wrapperCurrentClasses.contains('home')) {
+let exploreButton = document.querySelector('.explore');
+exploreButton.addEventListener('click', toogleNavOnOff);
 }
