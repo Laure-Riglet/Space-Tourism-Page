@@ -161,74 +161,132 @@ p {
 /* HOME SPECIFIC */
 
 #wrapper.home {
-	background-image: var(--bg-home-mobile);
+  background-image: var(--bg-home-mobile);
 }
 
 .home main {
-	padding: calc(48px + (100vh - 667px) / 4) 0;
+  padding: calc(48px + (100vh - 667px) / 4) 0;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home #introduction {
+  height: 276px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home h5 {
+  height: 19px;
+}
+
+.home h1 {
+  height: 100px;
+}
+
+.home p {
+  height: 125px;
+  max-width: 450px;
+}
+
+.explore {
+  position: relative;
+  z-index: 1;
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.explore::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  background-color: var(--color-light-grey);
+  transition: transform 0.5s ease-in, opacity 0.7s ease-in;
+}
+
+.explore:hover::after,
+.explore:focus::after {
+  opacity: 0.3;
+  transform: scale(1.4);
+}
+
+.explore span {
+  color: var(--color-very-dark-grey);
+  font-family: "Bellefair", serif;
+  font-size: 20px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  height: 23px;
+  margin-top: 9px;
+}
+
+/* DETAILS PAGES SPECIFIC */
+
+  .details main {
+	padding: calc(24px + (100vh - 667px) / 4) 0;
 	min-height: calc(100vh - 64px);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
-
-.home #introduction {
+  }
+  
+  .details #introduction {
 	height: 276px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
+  }
+  
+  .details h5 {
+	height: 19px;
+  }
+  
+  .details h1 {
+	height: 100px;
+  }
+  
+  .details p {
+	height: 125px;
+	max-width: 450px;
+  }
 
-.home h5 {
+  .details .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 	height: 19px;
 }
 
-.home h1 {
-	height: 100px;
-}
-
-.home p {
-	height: 125px;
-}
-
-.explore {
-	position: relative;
-	z-index: 1;
-    height: 150px;
-    width: 150px;
-    border-radius: 75px;
-    background-color: var(--color-white);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-self: center;
-}
-
-.explore::after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-	opacity: 0;
-    background-color: var(--color-light-grey);	
-	transition: transform 0.5s ease-in, opacity 0.7s ease-in;
-}
-
-.explore:hover::after,
-.explore:focus::after{
-	opacity: 0.3;
-	transform: scale(1.4);
-}
-
-
-.explore span {
-    color: var(--color-very-dark-grey);
-    font-family: 'Bellefair', serif;
-    font-size: 20px;
-    letter-spacing: 1.25px;
+.details span.number {
+    color: var(--color-light-grey);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 2.7px;
     text-transform: uppercase;
-	height: 23px;
-	margin-top: 9px;
+    font-weight: 700;
+    margin-right: 18px;
+}
+
+/* DESTINATIONS SPECIFIC */
+
+#wrapper.destinations {
+	background-image: var(--bg-destination-mobile);
+  }
+
+.destinations main img {
+    height: 170px;
+    width: 170px;
 }
