@@ -28,6 +28,14 @@ html {
   text-align: center;
 }
 
+main {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -70,8 +78,8 @@ div#nav-menu.on {
 }
 
 #nav-links {
-  margin: 118px 0 0 32px;
-  height: 182px;
+  margin: 112px 0 0 32px;
+  height: 184px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -100,7 +108,8 @@ div#nav-menu.on {
   letter-spacing: 2.7px;
   text-transform: uppercase;
   font-weight: 700;
-  width: 30px;
+  width: 29px;
+  height: 19px;
 }
 
 /* TEXT FORMATING */
@@ -122,6 +131,7 @@ h3 {
   font-family: "Bellefair", serif;
   font-size: 56px;
   text-transform: uppercase;
+  height: 64px;
 }
 
 h4 {
@@ -134,6 +144,7 @@ h5 {
   font-size: 16px;
   letter-spacing: 2.7px;
   text-transform: uppercase;
+  height: 19px;
 }
 
 .subheading1 {
@@ -166,10 +177,6 @@ p {
 
 .home main {
   padding: calc(48px + (100vh - 667px) / 4) 0;
-  min-height: calc(100vh - 64px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .home #introduction {
@@ -177,10 +184,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.home h5 {
-  height: 19px;
 }
 
 .home h1 {
@@ -235,58 +238,46 @@ p {
 
 /* DETAILS PAGES SPECIFIC */
 
-  .details main {
-	padding: calc(24px + (100vh - 667px) / 4) 0;
-	min-height: calc(100vh - 64px);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-  }
-  
-  .details #introduction {
-	height: 276px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-  }
-  
-  .details h5 {
-	height: 19px;
-  }
-  
-  .details h1 {
-	height: 100px;
-  }
-  
-  .details p {
-	height: 125px;
-	max-width: 450px;
-  }
+.details main {
+  padding: calc(24px + (100vh - 667px) / 4) 0 calc(48px + (100vh - 667px) / 4) 0;
+}
 
-  .details .heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-	height: 19px;
+.details #introduction {
+  height: 276px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details p {
+  height: 125px;
+  max-width: 450px;
+}
+
+.details .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 19px;
 }
 
 .details span.number {
-    color: var(--color-light-grey);
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2.7px;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-right: 18px;
+  color: var(--color-light-grey);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 18px;
 }
 
 /* DESTINATIONS SPECIFIC */
 
 #wrapper.destinations {
-	background-image: var(--bg-destination-mobile);
-  }
+  background-image: var(--bg-destination-mobile);
+}
 
 .destinations main img {
-    height: 170px;
-    width: 170px;
+  height: 170px;
+  width: 170px;
 }
