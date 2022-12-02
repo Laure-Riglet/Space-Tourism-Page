@@ -136,7 +136,10 @@ h3 {
 }
 
 h4 {
-  font-size: 0px;
+  font-size: 24px;
+  color: var(--color-white);
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -354,6 +357,15 @@ p {
 
 #wrapper.crew {
   background-image: var(--bg-crew-mobile);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.crew main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .crew main img {
@@ -368,7 +380,7 @@ p {
   width: 327px;
   height: 223px;
   margin-bottom: 32px;
-  border-bottom: 1px solid var(--color-dark-grey);
+  border-bottom: 1px solid var(--color-light-grey);
 }
 
 .crew .nav-destination,
@@ -377,7 +389,44 @@ p {
 }
 
 .crew .nav-crew {
+  width: 88px;
+  height: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
 
+.crew .nav-crew div.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-light-grey);
+}
+
+.crew .nav-crew div.circle.active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.crew .subheading2 {
+  color: var(--color-light-grey);
+  height: 18px;
+  font-family: "Bellefair", serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.crew .content h4 {
+  color: var(--color-white);
+  height: 28px;
+  font-family: "Bellefair", serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .crew .information {
