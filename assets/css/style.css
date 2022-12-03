@@ -128,7 +128,6 @@ h3 {
 	font-family: "Bellefair", serif;
 	font-size: 56px;
 	text-transform: uppercase;
-	height: 64px;
 }
 
 h4 {
@@ -254,6 +253,7 @@ p {
 	flex-direction: row;
 	justify-content: center;
 	height: 19px;
+	margin-bottom: 32px;
 }
 
 .details span.number {
@@ -282,17 +282,8 @@ p {
 	width: 170px;
 }
 
-.destination .heading {
-	margin-bottom: 32px;
-}
-
 .destination .image {
-	margin-bottom: 22px;
-}
-
-.destination .nav-crew,
-.destination .nav-technology {
-	display: none;
+	margin-bottom: 23px;
 }
 
 .destination .nav-destination {
@@ -326,17 +317,17 @@ p {
 	margin-bottom: 32px;
 }
 
-.destination .information {
-	max-width: 573px;
-	width: 100%;
-}
-
-.destination .information .separator {
+.destination .separator {
 	height: 1px;
-	width: 100%;
+	width: 327px;
 	background-color: var(--color-very-light-grey);
 	opacity: 0.27;
 	margin-bottom: 32px;
+}
+
+.destination .information {
+	max-width: 573px;
+	width: 100%;
 }
 
 .destination .topic .subheading1 {
@@ -370,20 +361,11 @@ p {
 	height: 222px;
 }
 
-.crew .heading {
-	margin-bottom: 32px;
-}
-
 .crew .image {
 	width: 327px;
 	height: 223px;
 	margin-bottom: 32px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.crew .nav-destination,
-.crew .nav-technology {
-	display: none;
 }
 
 .crew .nav-crew {
@@ -423,10 +405,6 @@ p {
 	margin-bottom: 16px;
 }
 
-.crew .information {
-	display: none;
-}
-
 /* TECHNOLOGY SPECIFIC */
 
 #wrapper.technology {
@@ -438,10 +416,6 @@ p {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-}
-
-.technology .heading {
-	margin-bottom: 32px;
 }
 
 .technology main .image {
@@ -467,8 +441,7 @@ p {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	background-color: var(--color-dark-blue);
-	color: var(--color-very-light-grey);
+	color: var(--color-white);
 	border: 1px solid rgba(255, 255, 255, 0.25);
 	font-family: "Bellefair", serif;
 	font-size: 16px;
@@ -491,4 +464,322 @@ p {
 .technology .content h4 {
 	height: 28px;
 	margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+	html {
+		--bg-home: url(../img/home/background-home-tablet.jpg);
+		--bg-destination: url(../img/destination/background-destination-tablet.jpg);
+		--bg-crew: url(../img/crew/background-crew-tablet.jpg);
+		--bg-technology: url(../img/technology/background-technology-tablet.jpg);
+	}
+
+	#wrapper {
+		padding: 0;
+		position: relative;
+	}
+
+	main {
+		min-height: calc(100vh - 96px);
+	}
+
+	header {
+		height: 96px;
+		margin-left: 39px;
+	}
+
+	header>img {
+		width: 48px;
+		height: 48px;
+	}
+
+	nav>img {
+		display: none;
+	}
+
+	#nav-menu {
+		position: relative;
+		height: 96px;
+		width: 450px;
+		right: 0;
+		-webkit-backdrop-filter: blur(30px);
+		backdrop-filter: blur(30px);
+	}
+
+	#nav-menu>img {
+		display: none;
+	}
+
+	#nav-links {
+		margin: 0 46px 0 48px;
+		height: 96px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	#nav-links>a {
+		align-items: flex-start;
+		justify-content: center;
+		height: 57px;
+	}
+
+	#nav-links>a:hover {
+		border-right: 0;
+		border-bottom: 4px solid rgba(255, 255, 255, 0.25);
+	}
+
+	#nav-links>a.current {
+		border-right: 0;
+		border-bottom: 4px solid var(--color-white);
+	}
+
+	#nav-links>a>span.number {
+		display: none;
+	}
+
+	#nav-links>a>h5 {
+		font-size: 14px;
+		letter-spacing: 2.36px;
+		color: var(--color-white);
+	}
+
+	/* TEXT FORMATING */
+
+	h1 {
+		font-size: 150px;
+		line-height: 150px;
+	}
+
+	h3 {
+		font-size: 80px;
+	}
+
+	h4 {
+		font-size: 40px;
+	}
+
+	h5 {
+		font-size: 20px;
+		letter-spacing: 3.38px;
+	}
+
+	.subheading1 {
+		font-size: 16px;
+		letter-spacing: 2.7px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+	/* HOME SPECIFIC */
+
+	#wrapper.home {
+		background-image: var(--bg-home);
+	}
+
+	.home main {
+		padding: calc(106px + (100vh - 1024px) / 4) 0 calc(90px + (100vh - 1024px) / 4) 0;
+	}
+
+	.home #introduction {
+		height: calc(334px + (100vh - 1024px) / 4);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.home h5 {
+		height: 24px;
+		margin-bottom: 24px;
+	}
+
+	.home h1 {
+		height: 150px;
+		margin-bottom: 24px;
+	}
+
+	.home p {
+		height: 112px;
+		width: 438px;
+	}
+
+	.explore {
+		height: 242px;
+		width: 242px;
+		border-radius: 50%;
+	}
+
+	.explore span {
+		font-size: 32px;
+		letter-spacing: 2px;
+		height: 37px;
+		margin-top: 12px;
+	}
+
+	/* DETAILS PAGES SPECIFIC */
+
+	.details main {
+		padding: calc(40px + (100vh - 1024px) / 4) 0 0 0;
+	}
+
+	.details p {
+		min-height: 84px;
+		max-width: 458px;
+		display: flex;
+		align-items: center;
+	}
+
+	.details .heading {
+		justify-content: flex-start;
+		align-self: flex-start;
+		height: 24px;
+		margin-left: 38.5px;
+		margin-bottom: 60px;
+	}
+
+	.details span.number {
+		font-size: 20px;
+		letter-spacing: 3.35px;
+		margin-right: 19px;
+	}
+
+	/* DESTINATION SPECIFIC */
+
+	.destination main img {
+		height: 300px;
+		width: 300px;
+	}
+
+	.destination .image {
+		margin-bottom: 50px;
+	}
+
+	.destination .nav-destination {
+		height: 34px;
+		width: 285.5px;
+		margin-bottom: 32px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.destination .nav-destination .subheading1 {
+		height: 34px;
+	}
+
+	.destination .nav-destination .subheading1.active {
+		color: var(--color-white);
+		border-bottom: 3px solid var(--color-white);
+	}
+
+	.destination .content {
+		width: 573px;
+	}
+
+	.destination .content>h3 {
+		height: 92px;
+		margin-bottom: 8px;
+	}
+
+	.destination .content>p {
+		max-width: 100%;
+		height: 84px;
+		margin-bottom: 49px;
+	}
+
+	.destination .separator {
+		width: 573px;
+		margin-bottom: 28px;
+	}
+
+	.destination .information {
+		height: 61px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 62px;
+	}
+
+	.destination .subheading2 {
+		margin-bottom: 0;
+	}
+
+	/* CREW SPECIFIC */
+
+	#wrapper.crew {
+		background-image: linear-gradient(0deg, rgba(36, 38, 47, 0.5) 0%, rgba(11, 13, 23, 0.5) 100%), var(--bg-crew);
+	}
+
+	.crew main {
+		position: relative;
+	}
+
+	.crew main img {
+		height: 532px;
+	}
+
+	.crew main img[alt="Douglas Hurley"] {
+		height: 572px;
+	}
+
+	.crew .image {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 532px;
+		margin-bottom: 0;
+		border-bottom: 0;
+		overflow: hidden;
+	}
+
+	.crew .nav-crew {
+		margin-bottom: 0;
+		order: 4;
+	}
+
+	.crew .content {
+		margin-bottom: 40px;
+	}
+
+	.crew .subheading2 {
+		height: 28px;
+		font-size: 24px;
+	}
+
+	.crew .content h4 {
+		height: 46px;
+		font-size: 40px;
+	}
+
+	/* TECHNOLOGY SPECIFIC */
+
+	.technology main .image {
+		height: 310px;
+		margin: 0 0 56px 0;
+	}
+
+	.technology .nav-technology {
+		width: 210px;
+		height: 60px;
+		margin-bottom: 44px;
+	}
+
+	.technology .nav-technology div.circle {
+		width: 60px;
+		height: 60px;
+		font-size: 24px;
+	}
+
+	.technology .subheading1 {
+		height: 19px;
+		margin-bottom: 16px;
+	}
+
+	.technology .content h4 {
+		height: 46px;
+	}
 }
