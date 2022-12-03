@@ -1,12 +1,9 @@
 @import url(https://fonts.bunny.net/css?family=barlow:200|barlow-condensed:200,700|bellefair:400);
 
 html {
-  --color-dark-blue: #0b0d17;
   --color-white: #fff;
   --color-very-light-grey: #d0d6f9;
-  --color-light-grey: #85868b;
-  --color-dark-grey: #24262f;
-  --color-very-dark-grey: #151620;
+  --color-dark-blue: #0b0d17;
 
   --bg-home-mobile: url(../img/home/background-home-mobile.jpg);
   --bg-destination-mobile: url(../img/destination/background-destination-mobile.jpg);
@@ -102,7 +99,7 @@ div#nav-menu.on {
 }
 
 #nav-links > a:hover {
-  border-right: 4px solid var(--color-light-grey);
+  border-right: 4px solid var(--color-very-light-grey);
 }
 
 #nav-links > a > span.number {
@@ -223,7 +220,7 @@ p {
   height: 100%;
   border-radius: 50%;
   opacity: 0;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-very-light-grey);
   transition: transform 0.5s ease-in, opacity 0.7s ease-in;
 }
 
@@ -234,7 +231,7 @@ p {
 }
 
 .explore span {
-  color: var(--color-very-dark-grey);
+  color: var(--color-dark-blue);
   font-family: "Bellefair", serif;
   font-size: 20px;
   letter-spacing: 1.25px;
@@ -341,7 +338,8 @@ p {
 .destination .information .separator {
   height: 1px;
   width: 100%;
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-very-light-grey);
+  opacity: 0.27;
   margin-bottom: 32px;
 }
 
@@ -384,7 +382,7 @@ p {
   width: 327px;
   height: 223px;
   margin-bottom: 32px;
-  border-bottom: 1px solid var(--color-light-grey);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .crew .nav-destination,
@@ -405,22 +403,18 @@ p {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: var(--color-light-grey);
+  background-color: var(--color-white);
+  opacity: 0.175;
 }
 
 .crew .nav-crew div.circle.active {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-white);
+  opacity: 1;
 }
 
 .crew .subheading2 {
-  color: var(--color-light-grey);
+  opacity: 0.495;
   height: 18px;
-  font-family: "Bellefair", serif;
   font-size: 16px;
-  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
@@ -479,7 +473,7 @@ p {
   border-radius: 50%;
   background-color: var(--color-dark-blue);
   color: var(--color-very-light-grey);
-  border: 1px solid var(--color-light-grey);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   font-family: "Bellefair", serif;
   font-size: 16px;
   display: flex;
