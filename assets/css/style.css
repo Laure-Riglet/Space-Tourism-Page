@@ -461,7 +461,7 @@ p {
   height: 170px;
   width: 100vw;
   position: absolute;
-  top: 75px;
+  top: calc(75px + (100vh - 667px) /2);
   left: -24px;
 }
 
