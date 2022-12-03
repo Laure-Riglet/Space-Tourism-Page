@@ -1,0 +1,175 @@
+@media (min-width: 768px) {
+    html {
+        --bg-home: url(../img/home/background-home-tablet.jpg);
+        --bg-destination: url(../img/destination/background-destination-tablet.jpg);
+        --bg-crew: url(../img/crew/background-crew-tablet.jpg);
+        --bg-technology: url(../img/technology/background-technology-tablet.jpg);
+    }
+
+    #wrapper {
+        padding: 0;
+        position: relative;
+    }
+
+    main {
+        min-height: calc(100vh - 96px);
+    }
+
+    header {
+        height: 96px;
+        margin-left: 39px;
+    }
+
+    header>img {
+        width: 48px;
+        height: 48px;
+    }
+
+    nav>img {
+        display: none;
+    }
+
+    #nav-menu {
+        position: relative;
+        height: 96px;
+        width: 450px;
+        right: 0;
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+    }
+
+    #nav-menu>img {
+        display: none;
+    }
+
+    #nav-links {
+        margin: 0 46px 0 48px;
+        height: 96px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    #nav-links>a {
+        align-items: flex-start;
+        justify-content: center;
+        height: 57px;
+    }
+
+    #nav-links>a:hover {
+        border-right: 0;
+        border-bottom: 4px solid rgba(255, 255, 255, 0.25);
+    }
+
+    #nav-links>a.current {
+        border-right: 0;
+        border-bottom: 4px solid var(--color-white);
+    }
+
+    #nav-links>a>span.number {
+        display: none;
+    }
+
+    #nav-links>a>h5 {
+        font-size: 14px;
+        letter-spacing: 2.36px;
+        color: var(--color-white);
+    }
+
+    /* TEXT FORMATING */
+
+    h1 {
+        font-size: 150px;
+        line-height: 150px;
+    }
+
+    /* h2 {
+        font-size: 0px;
+    }
+
+    h3 {
+        color: var(--color-white);
+        font-family: "Bellefair", serif;
+        font-size: 56px;
+        text-transform: uppercase;
+        height: 64px;
+    }
+
+    h4 {
+        font-size: 24px;
+        color: var(--color-white);
+        font-family: "Bellefair", serif;
+        text-transform: uppercase;
+    } */
+
+    h5 {
+        font-size: 20px;
+        letter-spacing: 3.38px;
+    }
+
+    /*     .subheading1 {
+        color: var(--color-very-light-grey);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 14px;
+        letter-spacing: 2.36px;
+        text-transform: uppercase;
+    }
+
+    .subheading2 {
+        color: var(--color-white);
+        font-family: "Bellefair", serif;
+        font-size: 28px;
+        text-transform: uppercase;
+    } */
+
+    p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    /* HOME SPECIFIC */
+
+    #wrapper.home {
+        background-image: var(--bg-home);
+    }
+
+    .home main {
+        padding: calc(106px + (100vh - 1024px) / 4) 0 calc(90px + (100vh - 1024px) / 4) 0;
+    }
+
+    .home #introduction {
+        height: calc(334px + (100vh - 1024px) / 4);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .home h5 {
+        height: 24px;
+        margin-bottom: 24px;
+    }
+
+    .home h1 {
+        height: 150px;
+        margin-bottom: 24px;
+    }
+
+    .home p {
+        height: 112px;
+        width: 438px;
+    }
+
+    .explore {
+        height: 242px;
+        width: 242px;
+        border-radius: 50%;
+    }
+
+    .explore span {
+        font-size: 32px;
+        letter-spacing: 2px;
+        height: 37px;
+        margin-top: 12px;
+    }
+}
